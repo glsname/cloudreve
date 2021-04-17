@@ -10,7 +10,6 @@
           "serviceName": "cloudreve",
           "servicePath": "/cloudreve",
           "uploadType": "image",
-          "containerPort": 80,
           "containerPort": 5212,
           "imageInfo": {
             "imageUrl": "qiupei/cloudreve:3.3.1"
