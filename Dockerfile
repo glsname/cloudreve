@@ -27,7 +27,8 @@ VOLUME /cloudreve
 RUN apt-get update && apt-get install -y wget  \
     && wget -q -O /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz ${cloudreve_URL} \
     && tar -zxvf /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz \ 
-    && rm /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz
+    && rm /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz \
+    && /cloudreve/cloudreve
 
 ##映射端口
 EXPOSE 80
