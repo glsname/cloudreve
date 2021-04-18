@@ -11,6 +11,7 @@
                 "mem": 0.5,    
                 "serviceName": "cloudreve",
                 "servicePath": "/cloudreve",
+                "localPath": "./cloudreve",
                 "uploadType": "package",
                 "containerPort": 80,
                 "volumeMounts": {
