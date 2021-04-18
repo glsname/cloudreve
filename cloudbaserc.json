@@ -1,35 +1,32 @@
 {
-  "version": "2.0",
-  "envId": "{{env.ENV_ID}}",
-  "framework": {
-    "name": "cloudreve",
-    "plugins": {
-      "client": {
-        "use": "@cloudbase/framework-plugin-container",
-        "inputs": {
-          "serviceName": "cloudreve",
-          "servicePath": "/cloudreve",
-          "uploadType": "image",
-          "containerPort": 80,
-          "imageInfo": {
-            "imageUrl": "glsname/cloudreve:latest"
-          },
-          "envVariables": {
-            "WEBSOCKET_ENABLED": "false"
-          },
-          "volumeMounts": {
-            "/cloudtemp": "cloudreve-cfs"
+    "version": "2.0",
+    "envId": "{{env.ENV_ID}}",
+    "framework":{
+        "name":"cloudreve",
+        "plugins":{
+            "client": {
+                "use": "@cloudbase/framework-plugin-container",
+                "inputs": {
+                "cpu": 0.25,
+                "mem": 0.5,    
+                "serviceName": "cloudreve",
+                "servicePath": "/cloudreve",
+                "localPath": "/",
+                "uploadType": "package",
+                "containerPort": 80,
+                "volumeMounts": {
+                    "/cloudtemp": "cloudreve-cfs"
+                  }
+                }
+            }
+        },
+        "requirement": {
+            "addons": [
+              {
+                "type": "CFS",
+                "name": "cloudtemp-cfs"
+              }
+            ]
           }
-        }
-      }
-    },
-    "requirement": {
-      "addons": [
-        {
-          "type": "CFS",
-          "name": "cloudreve-cfs"
-        }
-      ]
     }
-  }
 }
