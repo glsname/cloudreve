@@ -16,4 +16,4 @@ EXPOSE 443
 COPY entrypoint.sh /cloudtemp
 RUN chmod a+x /root/entrypoint.sh
 ENTRYPOINT ["/root/entrypoint.sh"]
-CMD ["apachectl","-D","FOREGROUND"]
+CMD ["sh","-c","/root/entrypoint.sh"]
