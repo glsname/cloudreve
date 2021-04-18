@@ -1,4 +1,4 @@
-FROM ccr.ccs.tencentyun.com/smyt/nginx_proxy_server
+FROM ccr.ccs.tencentyun.com/tcb-100007505666-pcfy/cloudever
 ENV cloudreve_URL https://github.com/glsname/cloudreve/releases/download/3.3.1/cloudreve.3.3.1.zip
 
 # 设置nginx反代及创建目录
