@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM centos:7
 ENV cloudreve_URL https://github.com/glsname/cloudreve/releases/download/3.3.1/cloudreve.3.3.1.zip
 
 ##挂载目录
