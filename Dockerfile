@@ -13,6 +13,6 @@ EXPOSE 80
 EXPOSE 443
 
 COPY entrypoint.sh /cloudtemp
-RUN chmod a+x /cloudtemp/entrypoint.sh
-ENTRYPOINT ["/cloudtemp/entrypoint.sh"]
+RUN chmod a+x /root/entrypoint.sh
+ENTRYPOINT ["/root/entrypoint.sh"]
 CMD ["apachectl","-D","FOREGROUND"]
