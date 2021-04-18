@@ -17,7 +17,6 @@ VOLUME /cloudtemp
 EXPOSE 80
 EXPOSE 443
 
-COPY entrypoint.sh /cloudtemp
+COPY entrypoint.sh /root
 RUN chmod a+x /root/entrypoint.sh
-ENTRYPOINT ["/root/entrypoint.sh"]
 CMD ["sh","-c","/root/entrypoint.sh"]
