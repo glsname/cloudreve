@@ -1,5 +1,6 @@
 FROM ccr.ccs.tencentyun.com/tcb_public/php:7.3-apache
-ENV cloudreve_URL https://github.com/glsname/cloudreve/releases/download/3.3.1/cloudreve.3.3.1.zip
+ENV cloudreve_URL https://scoop.glimmer.ltd/linux/cloudreve/v3.3.1/cloudreve_3.3.1_linux_amd64.tar.gz
+
 ##安装相关拓展
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
