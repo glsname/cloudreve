@@ -14,8 +14,7 @@ RUN yum install -y wget vim unzip \
 VOLUME /cloudtemp
 
 ##映射端口
-EXPOSE 80
-EXPOSE 443
+EXPOSE 80 443
 
 COPY entrypoint.sh /root
 RUN chmod a+x /root/entrypoint.sh
