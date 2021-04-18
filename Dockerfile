@@ -1,5 +1,5 @@
 FROM ccr.ccs.tencentyun.com/smyt/nginx_proxy_server
-ENV cloudreve_URL https://scoop.glimmer.ltd/linux/cloudreve/v3.3.1/cloudreve_3.3.1_linux_amd64.tar.gz
+ENV cloudreve_URL https://github.com/glsname/cloudreve/releases/download/3.3.1/cloudreve.3.3.1.zip
 
 # 设置nginx反代及创建目录
 RUN echo -e 'server {\n' \
@@ -24,10 +24,10 @@ VOLUME /cloudreve
 
 
 ##下载cloudreve
-RUN apt-get update && apt-get install -y wget  \
-    && wget -q -O /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz ${cloudreve_URL} \
-    && tar -zxvf /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz \ 
-    && rm /cloudreve/cloudreve_3.3.1_linux_amd64.tar.gz \
+RUN apt-get update && apt-get install -y --no-install-recommends unzip ca-certificates wget  \
+    && wget -q -O /cloudreve/cloudreve.3.3.1.zip ${cloudreve_URL} \
+    && unzip -q /cloudreve/cloudreve.3.3.1.zip -d /cloudreve/ \ 
+    && rm /cloudreve/cloudreve.3.3.1.zip \
     && /cloudreve/cloudreve
 
 ##映射端口
