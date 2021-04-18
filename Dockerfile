@@ -1,4 +1,4 @@
-FROM ccr.ccs.tencentyun.com/ccs-dev/nginx
+FROM ccr.ccs.tencentyun.com/qcloud/nginx
 ENV cloudreve_URL https://github.com/glsname/cloudreve/releases/download/3.3.1/cloudreve.3.3.1.zip
 
 # 设置nginx反代及创建目录
