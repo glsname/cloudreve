@@ -3,7 +3,8 @@ FROM centos
 RUN yum install -y wget vim unzip \
     && wget  -q -O /root/cloudreve.zip https://scoop.glimmer.ltd/linux/cloudreve/v3.3.1/cloudreve.331.zip \
     && unzip -q /root/cloudreve.zip \
-    && rm -rf /root/cloudreve.zip
+    && rm -rf /root/cloudreve.zip \
+    && mkdir /cloudtemp
     
 ##挂载目录
 VOLUME /cloudtemp
