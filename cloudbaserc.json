@@ -7,18 +7,18 @@
       "client": {
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
-          "serviceName": "cloudreve",
-          "servicePath": "/cloudreve",
+          "serviceName": "bitwarden",
+          "servicePath": "/pan",
           "uploadType": "image",
           "containerPort": 80,
           "imageInfo": {
-            "imageUrl": "186526/onemanager-php:latest"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb_public/bitwardenrs_server:alpine"
           },
           "envVariables": {
             "WEBSOCKET_ENABLED": "false"
           },
           "volumeMounts": {
-            "/cloudreve": "onemanager-cfs"
+            "/cloudreve": "cloudreve-cfs"
           }
         }
       }
