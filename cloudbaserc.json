@@ -7,7 +7,7 @@
       "client": {
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
-          "serviceName": "bitwarden",
+          "serviceName": "cloudreve",
           "servicePath": "/pan",
           "uploadType": "image",
           "containerPort": 80,
